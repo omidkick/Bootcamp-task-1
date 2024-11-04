@@ -1,0 +1,274 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+/* Root Variable*/
+:root {
+  --color-primary: #234894;
+  --color-primary-light: #afcedd;
+  --color-secondary-dark: #219f95;
+
+  /* --color-secondary-light: #fff6f2; */
+  /* --color-navbar-: #f8f8f8; */
+  /* Font's Color: */
+  --color-headings: #1e1e1e;
+  --color-body: #696969;
+  --color-white: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  color: var(--color-body);
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+}
+
+/* h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+} */
+
+/* @media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+} */
+
+/** Buttons **/
+
+.btn {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.8rem;
+    padding: 2.3rem 2.5rem;
+  }
+}
+
+@media screen and(min-width:1024px) {
+  .btn {
+    font-size: 1.8rem;
+    padding: 2rem 2rem;
+  }
+}
+
+/* Container was definerd as a wraper for our countent in order to be limited*/
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.block {
+  padding: 4rem 2rem;
+}
+@media screen and (min-width: 768px) {
+  .block {
+    padding: 6rem 2rem;
+  }
+}
+.block-heading {
+  margin-top: 6rem;
+}
+
+/*******  Card  *******/
+
+.request-continer {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+.request-heading {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: auto;
+  /* background-color: #ccc; */
+}
+
+.card__request {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__request .request__number {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.card__request > p {
+  font-size: 1.4rem;
+  /* font-weight: 600; */
+  color: var(--color-primary);
+}
+
+.request__date {
+  font-size: 1rem;
+  text-align: right;
+  color: var(--color-body);
+}
+
+.card__details {
+  margin-top: 0.5rem;
+}
+
+.card__details h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-headings);
+}
+
+.card__details > p {
+  font-size: 1rem;
+  color: var(--color-body);
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__info > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.footer__info > h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-headings);
+}
+
+/*!  FOR mid-size screens(>=768 px)  !*/
+
+@media screen and (min-width: 768px) {
+  .request-continer {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
+  }
+
+  .request-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card__request .request__number {
+    font-size: 1.8rem;
+    width: 40px;
+    height: 40px;
+  }
+  .card__request > p {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .request__date {
+    font-size: 1.2rem;
+  }
+  .card__details {
+    margin-top: 1rem;
+  }
+  .card__details h3 {
+    font-size: 1.8rem;
+  }
+  .card__details > p {
+    font-size: 1.2rem;
+  }
+  .footer__info > img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer__info > h4 {
+    font-size: 1.6rem;
+  }
+}
+
+/*!  FOR xl-size screens(>=1024 px)  !*/
+
+@media screen and (min-width: 1024px) {
+  .request-continer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .request-heading {
+    font-size: 3.5rem;
+    margin-bottom: 6rem;
+  }
+
+  .card {
+    padding: 1rem;
+    max-width: 450px;
+  }
+}
